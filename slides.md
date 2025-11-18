@@ -377,6 +377,25 @@ Interactive map viewer for STAC data.
 </div>
 
 ---
+layout: image-right
+image: /images/theme/Tanezrouft_Basin.jpg
+---
+
+# We would ❤️ to hear from you!
+
+
+<div class="flex flex-col items-center gap-2 mt-2">
+ <CurrentUrlQRCode
+    url="https://github.com/developmentseed/eoAPI/discussions/209"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="200"
+    :height="200"
+  />
+  <code text-xs>github.com/developmentseed/eoAPI/discussions/209</code>
+</div>
+
+
+---
 layout: title
 # Landsat 9 image of Apostle Islands, Lake Superior
 # https://unsplash.com/photos/j7HqdQqn7Jo
@@ -384,6 +403,38 @@ image: https://images.unsplash.com/photo-1722080767251-aad7fa1796d3
 ---
 
 # Thank you!
+
+<br mt-4 />
+
+### Authors
+
+<div mt-2 flex flex-wrap items-center gap-2>
+  <a href="https://github.com/bitner" target="_blank" title="@bitner">
+    <img src="https://github.com/bitner.png" alt="@bitnerd" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/gadomski" target="_blank" title="@gadomski">
+    <img src="https://github.com/gadomski.png" alt="@gadomski" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/alukach" target="_blank" title="@alukach">
+    <img src="https://github.com/alukach.png" alt="@alukach" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/pantierra" target="_blank" title="@pantierra">
+    <img src="https://github.com/pantierra.png" alt="@pantierra" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/ividito" target="_blank" title="@ividito">
+    <img src="https://github.com/ividito.png" alt="@ividito" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/vincentsarago" target="_blank" title="@vincentsarago">
+    <img src="https://github.com/vincentsarago.png" alt="@vincentsarago" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/danielfdsilva" target="_blank" title="@danielfdsilva">
+    <img src="https://github.com/danielfdsilva.png" alt="@danielfdsilva" w-10 h-10 rounded-full />
+  </a>
+  <a href="https://github.com/hrodmn" target="_blank" title="@hrodmn">
+    <img src="https://github.com/hrodmn.png" alt="@hrodmn" w-10 h-10 rounded-full />
+  </a>
+</div>
+
 
 <DecorativeRectangle
   width="30%"
