@@ -1,7 +1,7 @@
 ---
-title: DevelopmentSeed Slidev Theme
+title: FOSS4G - State of eoAPI
 info: |
-  DevelopmentSeed Slidev Theme - A demonstration of layouts, components, and Slidev capabilities.
+  What's changed in eoAPI in 2025, what's on the horizon for 2026?
 class: text-center
 highlighter: shiki
 drawings:
@@ -18,523 +18,278 @@ image: /images/theme/lena-delta.jpg
 ---
 
 
-# DevelopmentSeed Slidev Theme
+# State of the eoAPI
 
 ::subtitle::
-A showcase of layouts, components, and features
+What's changed in eoAPI in 2025 + What's on the horizon for 2026?
 
 <DecorativeRectangle
   width="50%"
   height="40%"
-  zIndex=20
+  :zIndex="20"
   :position="{
     bottom: '2%',
-    right: '2%',
+    right: '0%',
   }"
-  :customStyle="{ mixBlendMode: 'multiply' }"
+  :customStyle="{ mixBlendMode: 'multiply', borderTopRightRadius: 0, borderBottomRightRadius: 0 }"
 >
   <!-- You can place content _inside_ of rectangles! -->
   <div w-full h-full relative flex flex-col items-end justify-end p-4 text-white text-right>
+    <h4>
+      ⚡️ Lightning Talk
+    </h4>
     <h3 text-5xl>
-      Your Event
+      FOSS4G
     </h3>
     <h4 text-md font-mono>
-      2025-01-15
+      2025-11-19
     </h4>
     <h5 text-sm>
-      <code text-primary>@presenter</code>
+      <code text-primary>@alukach</code>
     </h5>
   </div>
 </DecorativeRectangle>
 <LogoHorPos position="top-left" height="24px" />
 
 ---
-layout: image-right
-# Landsat 8 Image of Ayon Island
-# https://unsplash.com/photos/B-bXvd0R1bM
-image: https://images.unsplash.com/photo-1722083855371-0d5a25647ce6
-class: image-narrow
+layout: iframe-right
+url: https://eoapi.dev
 ---
 
-# Theme Features
+# eoAPI
 
-* Custom brand colors
-* Roboto typography
-* Flexible layouts
-* Decorative components
-
-> Minimal theme, maximum impact
+**eoAPI** is an open-source toolkit for building scalable Earth Observation applications.
 
 <LogoHorNegMono position="bottom-right" />
 
 <!-- Also supports notes that are displayed in the presenter view. Just make sure that the comment is places at the END of the slide (after logo/rectangles) -->
-
-
----
-layout: image-right
-# Landsat 9 Image of Kangerdlugssuaq Glacier, Greenland
-# https://unsplash.com/photos/PgL1p8TBGNQ
-image: https://images.unsplash.com/photo-1722080768196-8983bbbb5c0f
-class: image-narrow
 ---
 
-# Click Animations
+# pgstac
 
-<v-click>
+> A set of SQL functions and schema to build highly performant databases for Spatio-Temporal Asset Catalogs (STAC).
 
-### Use `v-click` for progressive disclosure
-</v-click>
+<v-clicks>
 
-<v-click>
+- collection search
+- improved data loading with queryables
+- maintenance: improved stability via miscellanious fixes
+- maintenance: improved scalability via low-level optimizations
 
-* First bullet appears
-* Second bullet appears
-* Third bullet appears
-</v-click>
-
-<v-click>
-
-> Perfect for revealing complex information step-by-step
-</v-click>
-
-<v-click>
-
-[📔 Docs](https://sli.dev/guide/animations)
-</v-click>
-
-<LogoHorNegMono position="bottom-left" />
+</v-clicks>
 
 ---
-layout: image-left
-# Landsat 8 image of Klyuchevskaya, Kamchatka Peninsula, Siberia, Russia
-# https://unsplash.com/photos/yMcULenXoik
-image: https://images.unsplash.com/photo-1744968776900-311abae36ead
-class: image-narrow
----
 
-# V-Mark Features
+# tipg
 
-## Highlight and cross-off text
+> Simple and Fast Geospatial OGC Features and Tiles API for PostGIS.
 
-Use `v-mark` + [Rough Notation](https://roughnotation.com/) to draw attention or indicate rejected options:
+<v-clicks>
 
-- `v-mark.highlight.orange` - <span v-mark.highlight.orange>Highlight text and <code>code</code></span>
-- `v-mark.crossed-off` - <span v-mark.crossed-off>Cross off text</span>
-- `v-mark.strike-through` - <span v-mark.strike-through>Strike through text</span>
-- `v-mark.circle` - <span v-mark.circle>Circle text</span>
-- `v-mark.underline` - <span v-mark.underline>Underline text</span>
+- maintenance: improved stability via miscellanious fixes
+- looking at expanding backends to duckdb / datafusion / gdal
 
-[📔 Docs](https://sli.dev/features/rough-marker.html)
-
-<LogoHorNegMono position="bottom-left" />
+</v-clicks>
 
 ---
-layout: image-right
-# Fjords in southeastern coast of Greenland
-# https://unsplash.com/photos/blue-white-and-red-abstract-painting-3O2HJPzgkQY
-image: https://images.unsplash.com/photo-1579818276659-2943e3cd4b30
----
 
-# Lists & Styling
+# stac-fastapi-pgstac
 
-- Styled unordered lists
-  - Proper spacing
-    - Nested list support
-- Orange bullet points
+> An HTTP interface built in FastAPI to validate requests, sends data to a PgSTAC backend, and adds links to the returned data
 
-1. We count
-2. And keep counting...
-   1. And count separately
-   2. And more!
-      1. It doesn't stop!
-3. Until we're finished.
+<v-clicks >
 
-<LogoHorNegMono position="bottom-right" />
+- Collection Search extension!
+  - free-text search
+  - query (stacql)
+  - filter (cql)
+  - sorting
+  - fields
+- improved pagination
+
+</v-clicks>
 
 ---
-layout: image-left
-# Landsat 9 Image of Prudhoe Bay, Alaska
-# https://unsplash.com/photos/a-satellite-image-of-a-body-of-water-F8BGGoayfeQ
-image: https://images.unsplash.com/photo-1722082839868-d900d1a07e69
-class: image-narrow
----
 
-# Layouts
+# titiler
 
-We use `image-left` and `image-right` layouts for the majority of these slides, with optional `image-narrow` class for 1/3 width images.
+> A modern dynamic tile server built on top of FastAPI and Rasterio/GDAL.
 
-Beyond that, consider the `cover` and `title` layouts along with all the other layouts described in the docs.
+<v-clicks>
 
-[📔 Docs](https://sli.dev/guide/layout)
+- OGC Maps API (`/map`) and `/preview/{width}x{height}.{format}` endpoints
+- HTML responses for tilesets, tilematrixsets, algorithms, colormaps, and landing page
+- Zarr support in `titiler.xarray` with Obstore
+- OpenTelemetry integration
 
-<LogoHorNegMono position="bottom-left" />
+</v-clicks>
 
 ---
-layout: two-cols
-gap: 8
----
 
-# Two Column Layout
+# eoapi-cdk
 
-<div mt-5 />
+> A package of AWS CDK constructs designed to encapsulate eoAPI services and best practices as simple reusable components.
 
-Perfect for side-by-side content:
+<v-clicks>
 
-- Technical details
-- Code examples
-- Comparisons
-- Process flows
+- New constructs:
+  - `stac-auth-proxy`
+  - `PrivateLambdaApiGateway`
+  - `stactools-item-generator` & `stac-item-loader`
+- Lambda **SnapStart** option to reduce cold starts
 
-```python
-def process_data(input):
-    result = transform(input)
-    return result
-```
-
-::right::
-
-<div mt-5 />
-
-## Features
-
-**Configurable spacing:**
-- Use `gap` prop for column spacing
-- Default is `gap: 4`
-
-**Flexible ratios:**
-- `leftRatio: 50` = 50/50 split (default)
-- `leftRatio: 60` = 60/40 split
-- `leftRatio: 40` = 40/60 split
-
-**Perfect for:**
-- Before/after comparisons
-- Diagrams with explanations
-- Multi-step processes
-
-<LogoHorPos position="bottom-right" height="24px" />
-
-<DecorativeRectangle
-  width="30%"
-  height="20%"
-  zIndex=10
-  :position="{
-    top: '-5%',
-    left: '19%',
-  }"
-  :customStyle="{ mixBlendMode: 'multiply' }"
-/>
+</v-clicks>
 
 ---
-layout: image-right
-image: https://images.unsplash.com/photo-1722083854982-2f1516cf263c
----
 
-# Table Styling
+# eoapi-k8s
 
-<div mt-5 />
+> Production-ready Kubernetes deployment with flexible database options, unified ingress configuration, and built-in monitoring.
 
-Tables are styled with brand colors and clean borders:
+<v-clicks>
 
-| Feature | openEO | TiTiler |
-| --- | --- | --- |
-| **Data Model** | Multi-dimensional arrays | Rasters |
-| **Processing** | Batch (async) | Dynamic (sync) |
-| **Infrastructure** | Heavy (dask) | Lightweight |
-| **API** | Graph-based | Function-based |
+- Improved pgSTAC via exposing deep configuration to helm charts
+- Optional pgSTAC queue processor and extent updater CronJobs wired into those settings
+- Improved ingress and routing configuration with NGINX and Traefik
+- STAC Browser integration
+- Local testing with k3s/minikube
 
-**Features:**
-- Orange header text
-- Clean borders
-- Proper spacing
-- Alternating row colors
+</v-clicks>
 
-<LogoHorNegMono position="bottom-right" />
 
 ---
 layout: iframe-right
-url: https://developmentseed.org/
+url: https://developmentseed.org/stac-auth-proxy/
 ---
 
-# Iframe Layout
+# stac-auth-proxy
 
-### Embed External Content
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-green-500 text-white>New</span>
 
-The `iframe-right` layout lets you display external websites alongside your content.
+> An application gateway to impose advanced authorization policies on STAC APIs.
 
-Perfect for:
-- Documentation references
-- Live demos
-- Interactive examples
+**Key Features:**
 
-**Note:**
+- Fine-grained access control for STAC endpoints
+- Policy-based authorization
+- Transparent proxy for existing STAC APIs
 
-* Seems to open website in a mobile-layout
-* Doesn't work with github.com! 😿
-
-<LogoHorNegMono position="bottom-right" />
+<div class="absolute bottom-4 right-4 flex flex-col items-center">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/stac-auth-proxy/"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs mt-1>github.com/developmentseed/stac-auth-proxy</code>
+</div>
 
 ---
-layout: image-left
-class: image-narrow
-# Landsat 9 Image of Taklimakan Desert, China
-# https://unsplash.com/photos/KGzlTHjkyZM
-image: https://images.unsplash.com/photo-1722080767795-af488166033d
----
 
-# Decorative Rectangles
+# eoapi-notifier
 
-## Slide feeling boring? 
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-green-500 text-white>New</span>
 
-**💥SLAP A RECTANGLE ON IT!🟧✨**
+> Tooling to listen to changes to pgSTAC database and broadcast messages to consumers.
 
-```vue
-<DecorativeRectangle
-  width="15em"
-  height="10rem"
-  zIndex=10
-  :position="{
-    top: '4em',
-    left: '7em',
-  }"
-  :customStyle="{ mixBlendMode: 'multiply' }"
-/>
-```
+**Key Features:**
+- Real-time change detection from pgSTAC
+- MQTT message broadcasting
+- Event-driven architecture for STAC workflows
 
-Play around with the [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode#syntax)
-
-<DecorativeRectangle
-  width="23em"
-  height="10rem"
-  zIndex=10
-  :position="{
-    bottom: '2%',
-    left: '-1em',
-  }"
-  :customStyle="{ mixBlendMode: 'multiply' }"
-/>
-<LogoHorNegMono position="bottom-left" />
----
-layout: image-left
-image: /images/theme/lena-delta.jpg
-class: image-narrow
----
-
-# Magic Move
-
-Animate code transitions smoothly
-
-````md magic-move
-```json
-{
-  "id": "product-123",
-  "name": "Widget",
-  "price": 29.99
-}
-```
-```json
-{
-  "id": "product-123",
-  "name": "Premium Widget",
-  "price": 39.99,
-  "category": "electronics",
-  "inStock": true
-}
-```
-````
-
-[📔 Docs](https://sli.dev/features/shiki-magic-move)
-
-
-<LogoHorNegMono position="bottom-left" />
+<div class="absolute bottom-4 right-4 flex flex-col items-center">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/eoapi-notifier/"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs mt-1>github.com/developmentseed/eoapi-notifier</code>
+</div>
 
 ---
 layout: image-right
-# Sentinel-2A image of the Southern Tibetan Plateau
-# image: https://images.unsplash.com/photo-1536227019771-b2eac2dd6121
-image: https://images.unsplash.com/photo-1744968777300-210d3bb46817
-class: image-narrow
+image: /images/stac-manager.png
+backgroundSize: contain
 ---
 
-## Synchronized Animations
+# stac-manager
 
-Magic-move with v-mark highlighting
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-green-500 text-white>New</span>
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-amber-500 text-white>Experimental</span>
 
-````md magic-move
-```json
-```
-```json
-// 1 - Client request
-GET /api/products/search
-```
-```json
-// 2 - Parse parameters
-{
-  "path": "/api/products/search",
-  "query": "laptops"
-}
-```
-```json
-// 3 - Build search query
-{
-  "path": "/api/products/search",
-  "query": "laptops",
-  "filter": "category = electronics AND type = laptop"
-}
-```
-```json
-// 4 - Add to request
-{
-  "path": "/api/products/search?filter=category = electronics",
-  "query": "laptops",
-  "filter": "category = electronics AND type = laptop"
-}
-```
-```json
-// 5 - Execute database query
-SELECT * FROM products WHERE category = 'electronics' AND type = 'laptop'
-```
-````
+> Web application for detail-oriented curation of STAC collections by subject matter experts.
 
-1. <span v-mark.highlight.orange="{ at: 1, to: 2 }">Client sends request</span>
-2. <span v-mark.highlight.orange="{ at: 2, to: 3 }">Parse query parameters</span>
-3. <span v-mark.highlight.orange="{ at: 3, to: 4 }">Build search filter</span>
-4. <span v-mark.highlight.orange="{ at: 4, to: 5 }">Append to request</span>
-5. <span v-mark.highlight.orange="{ at: 5 }">Execute against database</span>
+- Uses STAC API Transaction Extension
+- Extensible plugin system for STAC extensions
+- Modular React packages for customization:
+  - `@stac-manager/client`, `data-core`, `data-widgets`, `data-plugins`
 
-<LogoHorNegMono position="bottom-right" />
-
----
-layout: cover
-# Copernicus Sentinel-2 image of Tanezrouft Basin, Sahara, southern Algeria and northern Mali
-# https://en.wikipedia.org/wiki/Tanezrouft#/media/File:Tanezrouft_Basin_ESA22416295.jpeg
-background: '/images/theme/Tanezrouft_Basin.jpg'
-class: px-5
----
-
-# Code Highlighting
-
-Line-by-Line Focus
-
-```python [filename.py] {all|5|8|9-10|all}
-@dataclasses.dataclass
-class DataProcessor:
-    """Process data with configurable filters"""
-
-    async def __call__(self, context: dict[str, Any]) -> str:
-        """Apply processing based on context parameters"""
-        logger.debug("Processing with context %s", context)
-        filter_type = context.get("filter")
-        if filter_type:
-            return f"filter: {filter_type}"
-        return "default"
-
-```
-
-<LogoHorNegMono position="bottom-right" />
-
-
----
-layout: cover
-# Landsat 9 image of Bangladesh Coast
-# https://unsplash.com/photos/eGGENWtikd0
-background: https://images.unsplash.com/photo-1722083854850-4a24185465ac
-class: px-10
----
-
-### Monaco Editor
-
-Interactive code with live execution
-
-```ts {monaco-run} {autorun:true}
-/**
- * Fetch GitHub repositories for an organization
- */
-async function fetchRepositories(org: string = 'developmentseed') {
-  const url = `https://api.github.com/orgs/${org}/repos?per_page=5&sort=updated`;
-  console.log(`Fetching ${url}...`)
-  const response = await fetch(url);
-  const data = await response.json();
-  console.log(`Found ${data.length} repositories`)
-  if (!data.length) return console.log('No repositories found')
-  for (const repo of data) {
-    console.log(` - ${repo.name} (⭐ ${repo.stargazers_count})`);
-  }
-}
-
-await fetchRepositories();
-```
-
-<LogoHorNegMono position="top-right" />
-
-<!-- NOTE: Monaco's interactive code runner does NOT play well with presenter mode. If you are presenting and want to do live code edits, do those edits on the shared screen, not in the presenter's view -->
-
----
-layout: image-left
-# Landsat 8 image of the Ord River in Australia
-# https://unsplash.com/photos/2BThgnOYoIc
-image: https://images.unsplash.com/photo-1744968776986-3deb08e40a24
-class: image-narrow
----
-
-# Mermaid Diagrams
-
-```mermaid
-pie title How I spent time preparing for my talk
-"Writing slide content" : 3
-"Looking for cool satellite imagery" : 79
-```
-
-[📔 Docs](https://docs.mermaidchart.com/mermaid-oss/intro/index.html)
-
-<LogoHorNegMono position="bottom-left" />
-
----
-layout: image-right
-# Landsat 9 Image of Western Guinea-Bissau
-# https://unsplash.com/photos/ZuN44o80Bn0
-image: https://images.unsplash.com/photo-1722083854982-2f1516cf263c
-class: image-narrow
----
-
-# QR Code Component
-
-<div text-xs>
-
-Dynamic QR codes powered by [`slidev-addon-qrcode`](https://github.com/kravetsone/slidev-addon-qrcode)
-
-
-```jsx
-<CurrentUrlQRCode />
-<CurrentUrlQRCode includeSlideNumber/>
-<CurrentUrlQRCode 
-  width="100" height="100" 
-  image='/images/logos/symbol--pos-neg@2x.png'
-  url="https://developmentseed.org"
-  :dotsOptions="{ 
-    type: 'dots', 
-    color: 'var(--slidev-theme-primary)' 
-  }"
-/>
-```
-
+<div class="absolute bottom-4 left-4 flex flex-col items-center">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/stac-manager/"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs mt-1>github.com/developmentseed/stac-manager</code>
 </div>
 
-<div flex gap-4>
-<CurrentUrlQRCode  />
-<CurrentUrlQRCode  includeSlideNumber/>
-<CurrentUrlQRCode
-  width="100" height="100" 
-  image='/images/logos/symbol--pos-neg@2x.png'
-  url="https://developmentseed.org"
-  :dotsOptions="{ 
-    type: 'dots', 
-    color: 'var(--slidev-theme-primary)' 
-  }"
-/>
+---
+layout: iframe-right
+url: https://radiantearth.github.io/stac-browser/#/external/stac-geoparquet.labs.eoapi.dev
+scale: 0.5
+---
+
+# stac-fastapi-geoparquet
+
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-green-500 text-white>New</span>
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-amber-500 text-white>Experimental</span>
+
+Serve a full-featured STAC API from stac-geoparquet files — no database required.
+
+**Key Features:**
+- Serves from blob storage (S3, GCS, etc.)
+- No database infrastructure needed
+- Compatible with stac-geoparquet format
+
+<div class="absolute bottom-4 left-4 flex flex-col items-center">
+  <CurrentUrlQRCode
+    url="https://github.com/stac-utils/stac-fastapi-geoparquet"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs mt-1>github.com/stac-utils/stac-fastapi-geoparquet</code>
 </div>
 
+---
+layout: iframe-right
+url: https://developmentseed.org/stac-map/?href=https://raw.githubusercontent.com/developmentseed/labs-375-stac-geoparquet-backend/refs/heads/main/data/naip.parquet
+scale: 0.5
+---
 
-<LogoHorNegMono position="bottom-right" />
+# stac-map
+
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-green-500 text-white>New</span>
+<span text-xs uppercase tracking-wide px-2 py-1 rounded bg-amber-500 text-white>Experimental</span>
+
+Interactive map viewer for STAC data.
+
+**Features:**
+- Visualize STAC items on a map
+- Support for geoparquet sources
+- Lightweight exploration interface
+
+<div class="absolute bottom-4 left-4 flex flex-col items-center">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/stac-map/"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs mt-1>github.com/developmentseed/stac-map</code>
+</div>
 
 ---
 layout: title
@@ -558,21 +313,17 @@ image: https://images.unsplash.com/photo-1722080767251-aad7fa1796d3
   <div w-full h-full relative flex flex-col items-start justify-between p-4 text-white text-left class="[&_a]:no-underline [&_a]:text-white [&_a:hover]:text-gray-200">
     <div mb-4 flex flex-col gap-5 items-start justify-start text-sm font-mono class="[&_a]:flex [&_a]:items-center [&_a]:gap-1">
       <Logo src="/images/logos/hor--neg-mono@2x.png" height="24px" alt="DevelopmentSeed" class="!relative !top-0 !left-0" />
-      <a href="https://developmentseed.org" target="_blank" title="Website">
-        <WebsiteIcon size="20" pr-1 />
-        <span>developmentseed.org</span>
-      </a>
-      <a href="mailto:hello@developmentseed.org" title="Email">
+      <a href="mailto:anthony@developmentseed.org" title="Email">
         <EmailIcon size="20" pr-1 />
-        <span>hello@developmentseed.org</span>
+        <span>anthony@developmentseed.org</span>
       </a>
-      <a href="https://github.com/developmentseed" target="_blank" title="GitHub">
+      <a href="https://github.com/alukach" target="_blank" title="GitHub">
         <GitHubIcon size="20" pr-1 />
-        <span>@developmentseed</span>
+        <span>@alukach</span>
       </a>
-      <a href="https://www.linkedin.com/company/development-seed" target="_blank" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/alukach" target="_blank" title="LinkedIn">
         <LinkedInIcon size="20" pr-1 />
-        <span>development-seed</span>
+        <span>in/alukach</span>
       </a>
       <!-- <a href="https://developmentseed.org/careers" target="_blank" class="font-sans" text-xs text-strong text-italics>
         <span pr-1>🚀</span>
