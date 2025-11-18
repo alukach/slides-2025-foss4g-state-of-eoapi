@@ -64,8 +64,8 @@ const resolvedImage = computed(() => resolveAssetUrl(props.image))
 <style scoped>
 .qrcode-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .qrcode-container.full-width {

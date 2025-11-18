@@ -34,7 +34,7 @@ What's changed in eoAPI in 2025 + What's on the horizon for 2026?
   :customStyle="{ mixBlendMode: 'multiply', borderTopRightRadius: 0, borderBottomRightRadius: 0 }"
 >
   <!-- You can place content _inside_ of rectangles! -->
-  <div w-full h-full relative flex flex-col items-end justify-end p-4 text-white text-right>
+  <div w-full h-full relative items-end justify-end p-4 text-white text-right>
     <h4>
       ⚡️ Lightning Talk
     </h4>
@@ -60,9 +60,22 @@ url: https://eoapi.dev
 
 **eoAPI** is an open-source toolkit for building scalable Earth Observation applications.
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://eoapi.dev"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>eoapi.dev</code>
+</div>
+
 <LogoHorNegMono position="bottom-right" />
 
 <!-- Also supports notes that are displayed in the presenter view. Just make sure that the comment is places at the END of the slide (after logo/rectangles) -->
+---
+layout: iframe-right
+url: https://stac-utils.github.io/pgstac/pgstac/
 ---
 
 # pgstac
@@ -78,6 +91,19 @@ url: https://eoapi.dev
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/stac-utils/pgstac"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/stac-utils/pgstac</code>
+</div>
+
+---
+layout: iframe-right
+url: https://developmentseed.org/tipg/
 ---
 
 # tipg
@@ -91,6 +117,19 @@ url: https://eoapi.dev
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/tipg"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/developmentseed/tipg</code>
+</div>
+
+---
+layout: iframe-right
+url: https://stac-utils.github.io/stac-fastapi-pgstac/
 ---
 
 # stac-fastapi-pgstac
@@ -109,6 +148,19 @@ url: https://eoapi.dev
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/stac-utils/stac-fastapi-pgstac"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/stac-utils/stac-fastapi-pgstac</code>
+</div>
+
+---
+layout: iframe-right
+url: https://developmentseed.org/titiler
 ---
 
 # titiler
@@ -124,6 +176,19 @@ url: https://eoapi.dev
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/titiler"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/developmentseed/titiler</code>
+</div>
+
+---
+layout: iframe-right
+url: https://developmentseed.org/eoapi-cdk
 ---
 
 # eoapi-cdk
@@ -140,6 +205,19 @@ url: https://eoapi.dev
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/eoapi-cdk"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/developmentseed/eoapi-cdk</code>
+</div>
+
+---
+layout: iframe-right
+url: https://developmentseed.org/eoapi-k8s
 ---
 
 # eoapi-k8s
@@ -150,12 +228,19 @@ url: https://eoapi.dev
 
 - Improved pgSTAC via exposing deep configuration to helm charts
 - Optional pgSTAC queue processor and extent updater CronJobs wired into those settings
-- Improved ingress and routing configuration with NGINX and Traefik
 - STAC Browser integration
-- Local testing with k3s/minikube
 
 </v-clicks>
 
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
+  <CurrentUrlQRCode
+    url="https://github.com/developmentseed/eoapi-k8s"
+    :dotsOptions="{ type: 'classy-rounded' }"
+    :width="100"
+    :height="100"
+  />
+  <code text-xs>github.com/developmentseed/eoapi-k8s</code>
+</div>
 
 ---
 layout: iframe-right
@@ -174,14 +259,14 @@ url: https://developmentseed.org/stac-auth-proxy/
 - Policy-based authorization
 - Transparent proxy for existing STAC APIs
 
-<div class="absolute bottom-4 right-4 flex flex-col items-center">
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
   <CurrentUrlQRCode
     url="https://github.com/developmentseed/stac-auth-proxy/"
     :dotsOptions="{ type: 'classy-rounded' }"
     :width="100"
     :height="100"
   />
-  <code text-xs mt-1>github.com/developmentseed/stac-auth-proxy</code>
+  <code text-xs>github.com/developmentseed/stac-auth-proxy</code>
 </div>
 
 ---
@@ -197,14 +282,14 @@ url: https://developmentseed.org/stac-auth-proxy/
 - MQTT message broadcasting
 - Event-driven architecture for STAC workflows
 
-<div class="absolute bottom-4 right-4 flex flex-col items-center">
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
   <CurrentUrlQRCode
     url="https://github.com/developmentseed/eoapi-notifier/"
     :dotsOptions="{ type: 'classy-rounded' }"
     :width="100"
     :height="100"
   />
-  <code text-xs mt-1>github.com/developmentseed/eoapi-notifier</code>
+  <code text-xs>github.com/developmentseed/eoapi-notifier</code>
 </div>
 
 ---
@@ -225,14 +310,14 @@ backgroundSize: contain
 - Modular React packages for customization:
   - `@stac-manager/client`, `data-core`, `data-widgets`, `data-plugins`
 
-<div class="absolute bottom-4 left-4 flex flex-col items-center">
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
   <CurrentUrlQRCode
     url="https://github.com/developmentseed/stac-manager/"
     :dotsOptions="{ type: 'classy-rounded' }"
     :width="100"
     :height="100"
   />
-  <code text-xs mt-1>github.com/developmentseed/stac-manager</code>
+  <code text-xs>github.com/developmentseed/stac-manager</code>
 </div>
 
 ---
@@ -253,14 +338,14 @@ Serve a full-featured STAC API from stac-geoparquet files — no database requir
 - No database infrastructure needed
 - Compatible with stac-geoparquet format
 
-<div class="absolute bottom-4 left-4 flex flex-col items-center">
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
   <CurrentUrlQRCode
     url="https://github.com/stac-utils/stac-fastapi-geoparquet"
     :dotsOptions="{ type: 'classy-rounded' }"
     :width="100"
     :height="100"
   />
-  <code text-xs mt-1>github.com/stac-utils/stac-fastapi-geoparquet</code>
+  <code text-xs>github.com/stac-utils/stac-fastapi-geoparquet</code>
 </div>
 
 ---
@@ -281,14 +366,14 @@ Interactive map viewer for STAC data.
 - Support for geoparquet sources
 - Lightweight exploration interface
 
-<div class="absolute bottom-4 left-4 flex flex-col items-center">
+<div class="absolute bottom-4 left-4 flex flex-row items-center gap-2">
   <CurrentUrlQRCode
     url="https://github.com/developmentseed/stac-map/"
     :dotsOptions="{ type: 'classy-rounded' }"
     :width="100"
     :height="100"
   />
-  <code text-xs mt-1>github.com/developmentseed/stac-map</code>
+  <code text-xs>github.com/developmentseed/stac-map</code>
 </div>
 
 ---
@@ -310,8 +395,8 @@ image: https://images.unsplash.com/photo-1722080767251-aad7fa1796d3
   }"
   :customStyle="{ mixBlendMode: 'multiply' }"
 >
-  <div w-full h-full relative flex flex-col items-start justify-between p-4 text-white text-left class="[&_a]:no-underline [&_a]:text-white [&_a:hover]:text-gray-200">
-    <div mb-4 flex flex-col gap-5 items-start justify-start text-sm font-mono class="[&_a]:flex [&_a]:items-center [&_a]:gap-1">
+  <div w-full h-full relative items-start justify-between p-4 text-white text-left class="[&_a]:no-underline [&_a]:text-white [&_a:hover]:text-gray-200">
+    <div mb-4 gap-5 items-start justify-start text-sm font-mono class="[&_a]:flex [&_a]:items-center [&_a]:gap-1">
       <Logo src="/images/logos/hor--neg-mono@2x.png" height="24px" alt="DevelopmentSeed" class="!relative !top-0 !left-0" />
       <a href="mailto:anthony@developmentseed.org" title="Email">
         <EmailIcon size="20" pr-1 />
