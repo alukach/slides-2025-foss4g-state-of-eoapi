@@ -21,7 +21,9 @@ image: /images/theme/lena-delta.jpg
 # State of the eoAPI
 
 ::subtitle::
-What's changed in eoAPI in 2025 + What's on the horizon for 2026?
+What's changed in 2025?
+
+What's coming in 2026?
 
 <DecorativeRectangle
   width="50%"
